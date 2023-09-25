@@ -19,7 +19,7 @@ export class ServersComponent {
   servers = ['Testserver', 'Testserver 2'];
   secretPassword: string = 'titkos';
   disabledValue: boolean = false;
-  numberValue: number = 0;
+  numberValue = [];
 
   constructor() {
     setTimeout(() => {
@@ -37,8 +37,11 @@ export class ServersComponent {
     this.serverName = event.target.value;
   }
 
-  buttonClicked(event: any) {
-    this.disabledValue = true;
-    this.numberValue++;
+  buttonClicked() {
+    if (this.disabledValue === true) {
+      this.disabledValue = false;
+    } else {
+      this.disabledValue = true;
+    }
   }
 }

@@ -19,6 +19,6 @@
 </ng-template>
 <app-server *ngFor="let server of servers">{{ server }}</app-server>
 
-<button (click)="buttonClicked($event)">Display Button</button>
+<button (click)="buttonClicked()">Display Button</button>
 <p *ngIf="disabledValue">{{ secretPassword }}</p>
-<p [ngClass]="{ online: numberValue >= 5 }">{{ numberValue }}</p>
+<p>{{ numberValue }}</p>
