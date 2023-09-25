@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent {
-  /*   allowNewServer: boolean = false;
+  allowNewServer: boolean = false;
   serverCreationStatus: string = 'No server was created';
   serverName = 'Tester';
 
@@ -22,21 +22,5 @@ export class ServersComponent {
 
   onUpdateServerName(event: any) {
     this.serverName = event.target.value;
-  } */
-
-  inputValue: string = '';
-  buttonDisabled: boolean = true;
-  inputValue2: string = '';
-
-  onInputChange() {
-    if (this.inputValue !== '') {
-      this.buttonDisabled = false;
-    } else {
-      this.buttonDisabled = true;
-    }
-  }
-
-  buttonClicked() {
-    this.inputValue2 = this.inputValue;
   }
 }
